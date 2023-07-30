@@ -1,34 +1,53 @@
-# Cross-Platform Web/OS Authentication for 3rd Party Apps
+# KeyAuth Source Code -> Please star :star2:
+KeyAuth is an open source authentication system with cloud-hosted subscriptions available aswell https://keyauth.cc
+<br>
+*You're not allowed to sell KeyAuth. source made avaliable only for you to use*
 
-<img src="https://raw.githubusercontent.com/musaalif6969/indirect-pip-req/main/logo-1-dark.png" alt="Banner Image" width="300">
+To submit a suggestion or a bug, please go to https://keyauth.cc/app/?page=forms and submit a form!
 
-Welcome to our cross-platform web/IP authentication repository! This project gives you free vertion of Keyauth with AES-256 Encryption.
+[![CodeFactor](https://www.codefactor.io/repository/github/keyauth/keyauth-source-code/badge)](https://www.codefactor.io/repository/github/keyauth/keyauth-source-code)
+[![Telegram Chat](https://img.shields.io/endpoint?color=neon&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fkeyauth)](https://t.me/KeyAuth)
+[![Twitter](https://img.shields.io/twitter/follow/KeyAuth?cacheSeconds=3600)](https://twitter.com/KeyAuth)
 
-## Table of Contents
+[![Screenshot](https://i.imgur.com/rige1nM.png)](https://keyauth.cc)
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
+## Bugs ##
 
-## Introduction
+If the default example that isn't added to your software isn't functioning how it should, please go to https://keyauth.cc/app/?page=forms and submit a bug report in the `Report a Bug` modal.
 
-KeyAuth is an Open-source authentication system with cloud-hosted subscriptions available as well.
+However, we do **NOT** provide support for adding KeyAuth to your project. If you can't figure this out you should use Google or YouTube to learn more about the programming language you want to sell a program in.
 
-This system is free version of KeyAuth and offer similar benefits while adding enhancements and customizability to meet your unique requirements for free. For tergeting much better audince, get KeyAuth
+## Copyright License
 
-## Features
+KeyAuth is licensed under **Elastic License 2.0**
 
-- **Secure Authentication:** Employ advanced encryption techniques and secure protocols to safeguard user credentials and data.
-- **Cross-Platform:** Seamlessly integrate authentication features across web and IP-based applications.
-- **Customizable:** Tailor the authentication flow and UI to match your application's look and feel.
-- **User Management:** Manage user data, permissions, and roles with ease.
-- **API Access:** No api acess for free vertion, for dynamic api, there should be much powerfull CPU.
-- **Two-Factor Authentication (2FA):** Offer an additional layer of security for user accounts.
-- **Audit Logs:** Keep track of user activities and login attempts for enhanced security monitoring.
-- **Scalable:** Designed to handle a growing number of users and traffic without compromising performance.
-- **Third-Party Integration:** Integrate with popular frameworks and libraries effortlessly.
+* You may not provide the software to third parties as a hosted or managed
+service, where the service provides users with access to any substantial set of
+the features or functionality of the software.
 
-## Installation
+* You may not move, change, disable, or circumvent the license key functionality
+in the software, and you may not remove or obscure any functionality in the
+software that is protected by the license key.
 
-To install the KDE and you project, instead of keyauth use eur-mam-gei.mom
+* You may not alter, remove, or obscure any licensing, copyright, or other notices
+of the licensor in the software. Any use of the licensor’s trademarks is subject
+to applicable law.
 
+Thank you for your compliance, we work hard on the development of KeyAuth and do not appreciate our copyright being infringed.
+
+## Requirements ##
+
+- Web server (Apache or Nginx)
+- MySQL or MariaDB
+- Redis
+- PHP
+
+No setup support given to non-enterprise users. However for $79.99 you can purchase access to the source code of paid features (developer and seller plan features), setup support one-on-one with the Founder of KeyAuth, and a tutorial video on how to host KeyAuth for 100% free forever (good preformance & secure also) 
+
+Purchase enterprise today --> https://shop.keyauth.cc/product/6361c20e415e9
+
+Some pages such as the API endpoint that upgrades users after they purchase a subscription have been omitted to prevent violation of the license (No Commercial Access Allowed)
+
+## Updates ##
+
+https://headwayapp.co/keyauth-changelog/
