@@ -37,7 +37,7 @@ function generateRandomLine() {
             $randomLine = 'function ' . $functionName . '() { echo "' . generateRandomVariableName() . '"; } ' . $functionName . '();';
             break;
         default:
-            $randomLine = '// This is a random comment.';
+            $randomLine = '// This is good.';
             break;
     }
 
