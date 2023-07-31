@@ -2,7 +2,7 @@
 
 // Function to generate a random variable name
 function generateRandomVariableName($length = 5) {
-    $characters = 'abcdefghijklmnopqrastuvwxyz';
+    $characters = 'abcdefghijklmnopqrastuvwxz';
     $variableName = '';
     for ($i = 0; $i < $length; $i++) {
         $variableName .= $characters[rand(0, strlen($characters) - 1)];
