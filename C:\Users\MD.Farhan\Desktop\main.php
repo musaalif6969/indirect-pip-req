@@ -1,16 +1,13 @@
 <?php
 
-// Function to generate a random variable name
-function generateRandomVariableName($length = 8) {
-    $characters = 'abcdefghijklmnopqrastuvwx';
-    $variableName = '';
+function generateRandomNumber($length = 2) {
+    $number = '';
     for ($i = 0; $i < $length; $i++) {
-        $variableName .= $characters[rand(0, strlen($characters) - 1)];
+        $number .= rand(0, 9);
     }
-    return $variableName;
+    return $number;
 }
 
-// Function to generate a random PHP line
 function generateRandomLine() {
     $randomLine = '';
 
@@ -18,42 +15,44 @@ function generateRandomLine() {
 
     switch ($randomType) {
         case 1: // echo statement
-            $randomLine = 'echo "' . generateRandomVariableName() . '";';
+            $randomLine = 'echo ' . generateRandomNumber() . ';';
             break;
         case 2: // variable assignment
-            $randomLine = '$' . generateRandomVariableName() . ' = ' . rand(1, 100) . ';';
+            $randomLine = '$var' . generateRandomNumber() . ' = ' . rand(1, 100) . ';';
             break;
         case 3: // for loop
-            $loopVariable = generateRandomVariableName();
+            $loopVariable = 'i' . generateRandomNumber();
             $randomLine = 'for ($' . $loopVariable . ' = 1; $' . $loopVariable . ' <= ' . rand(1, 10) . '; $' . $loopVariable . '++) {';
-            $randomLine .= ' echo $' . generateRandomVariableName() . ' . " "; }';
+            $randomLine .= ' echo ' . generateRandomNumber() . ' . " "; }';
             break;
         case 4: // if-else statement
-            $conditionVariable = generateRandomVariableName();
-            $randomLine = 'if (' . rand(0, 1) . ') { echo "True"; } else { echo "False"; }';
+            $randomLine = 'if (' . (rand(0, 1) ? 'true' : 'false') . ') { echo ' . generateRandomNumber() . '; } else { echo ' . generateRandomNumber() . '; }';
             break;
         case 5: // function declaration
-            $functionName = generateRandomVariableName();
-            $randomLine = 'function ' . $functionName . '() { echo "' . generateRandomVariableName() . '"; } ' . $functionName . '();';
+            $functionName = 'func' . generateRandomNumber();
+            $randomLine = 'function ' . $functionName . '() { echo ' . generateRandomNumber() . '; } ' . $functionName . '();';
             break;
         default:
-            $randomLine = '// This is a random comment.';
+            $randomLine = '';
             break;
     }
 
     return $randomLine;
 }
 
-// Number of random lines to generate
 $numberOfLines = 50;
 
-// Generate the random PHP lines
 $randomPHPCode = '<?php' . PHP_EOL;
+$lines = [];
 for ($i = 0; $i < $numberOfLines; $i++) {
-    $randomPHPCode .= generateRandomLine() . PHP_EOL;
+    $lines[] = generateRandomLine();
+}
+shuffle($lines); // Randomize the order of the lines
+
+foreach ($lines as $line) {
+    $randomPHPCode .= $line . PHP_EOL;
 }
 
-// Save the generated PHP code to a file
 $filename = 'random_complex_lines.php';
 file_put_contents($filename, $randomPHPCode);
 
