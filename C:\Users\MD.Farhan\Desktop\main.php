@@ -1,8 +1,8 @@
 <?php
 
 // Function to generate a random variable name
-function generateRandomVariableName($length = 7) {
-    $characters = 'abcdefghijklmnopqrstuvwxyz';
+function generateRandomVariableName($length = 5) {
+    $characters = 'abcdefghijklmnopqrastuvwxyz';
     $variableName = '';
     for ($i = 0; $i < $length; $i++) {
         $variableName .= $characters[rand(0, strlen($characters) - 1)];
@@ -37,7 +37,7 @@ function generateRandomLine() {
             $randomLine = 'function ' . $functionName . '() { echo "' . generateRandomVariableName() . '"; } ' . $functionName . '();';
             break;
         default:
-            $randomLine = '// This is good.';
+            $randomLine = '// This is a random comment.';
             break;
     }
 
@@ -54,7 +54,7 @@ for ($i = 0; $i < $numberOfLines; $i++) {
 }
 
 // Save the generated PHP code to a file
-$filename = 'a.php';
+$filename = 'random_complex_lines.php';
 file_put_contents($filename, $randomPHPCode);
 
 echo "Random complex PHP lines generated and saved to '$filename'.";
