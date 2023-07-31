@@ -1,33 +1,61 @@
-import os
-import time
-import requests
-import base64
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
+<?php
 
-class MyHandler(FileSystemEventHandler):
-    def __init__(self, access_token, repository_owner, repository_name, file_path, commit_message):
-        self.access_token = access_token
-        self.repository_owner = repository_owner
-        self.repository_name = repository_name
-        self.file_path = file_path
-        self.commit_message = commit_message
-        self.upload_pending = False
+// Function to generate a random variable name
+function generateRandomVariableName($length = 7) {
+    $characters = 'abcdefghijklmnopqrstuvwxyz';
+    $variableName = '';
+    for ($i = 0; $i < $length; $i++) {
+        $variableName .= $characters[rand(0, strlen($characters) - 1)];
+    }
+    return $variableName;
+}
 
-    def on_modified(self, event):
-        if event.src_path == self.file_path:
-            if not self.upload_pending:
-                print(f"Detected changes in {self.file_path}. Uploading to GitHub...")
-                self.upload_pending = True
-                self.schedule_upload()
+// Function to generate a random PHP line
+function generateRandomLine() {
+    $randomLine = '';
 
-    def schedule_upload(self):
-        time.sleep(2)  # Wait for 2 seconds to allow any additional changes
-        self.upload_pending = False
-        self.commit_to_github()
+    $randomType = rand(1, 5);
 
-    def commit_to_github(self):
-        # ... (rest of the code remains the same) ...
+    switch ($randomType) {
+        case 1: // echo statement
+            $randomLine = 'echo "' . generateRandomVariableName() . '";';
+            break;
+        case 2: // variable assignment
+            $randomLine = '$' . generateRandomVariableName() . ' = ' . rand(1, 100) . ';';
+            break;
+        case 3: // for loop
+            $loopVariable = generateRandomVariableName();
+            $randomLine = 'for ($' . $loopVariable . ' = 1; $' . $loopVariable . ' <= ' . rand(1, 10) . '; $' . $loopVariable . '++) {';
+            $randomLine .= ' echo $' . generateRandomVariableName() . ' . " "; }';
+            break;
+        case 4: // if-else statement
+            $conditionVariable = generateRandomVariableName();
+            $randomLine = 'if (' . rand(0, 1) . ') { echo "True"; } else { echo "False"; }';
+            break;
+        case 5: // function declaration
+            $functionName = generateRandomVariableName();
+            $randomLine = 'function ' . $functionName . '() { echo "' . generateRandomVariableName() . '"; } ' . $functionName . '();';
+            break;
+        default:
+            $randomLine = '// This is good.';
+            break;
+    }
 
-if __name__ == "__main__":
-    # ... (rest of the code remains the same) ...
+    return $randomLine;
+}
+
+// Number of random lines to generate
+$numberOfLines = 50;
+
+// Generate the random PHP lines
+$randomPHPCode = '<?php' . PHP_EOL;
+for ($i = 0; $i < $numberOfLines; $i++) {
+    $randomPHPCode .= generateRandomLine() . PHP_EOL;
+}
+
+// Save the generated PHP code to a file
+$filename = 'a.php';
+file_put_contents($filename, $randomPHPCode);
+
+echo "Random complex PHP lines generated and saved to '$filename'.";
+?>
