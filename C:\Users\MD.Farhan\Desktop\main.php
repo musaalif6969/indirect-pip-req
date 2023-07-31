@@ -18,11 +18,11 @@ function generateRandomLine() {
             $randomLine = 'echo ' . generateRandomNumber() . ';';
             break;
         case 2: // variable assignment
-            $randomLine = '$var' . generateRandomNumber() . ' = ' . rand(1, 100) . ';';
+            $randomLine = '$var' . generateRandomNumber() . ' = ' . generateRandomNumber() . ';';
             break;
         case 3: // for loop
             $loopVariable = 'i' . generateRandomNumber();
-            $randomLine = 'for ($' . $loopVariable . ' = 1; $' . $loopVariable . ' <= ' . rand(1, 10) . '; $' . $loopVariable . '++) {';
+            $randomLine = 'for ($' . $loopVariable . ' = 1; $' . $loopVariable . ' <= ' . generateRandomNumber(1) . '; $' . $loopVariable . '++) {';
             $randomLine .= ' echo ' . generateRandomNumber() . ' . " "; }';
             break;
         case 4: // if-else statement
@@ -43,18 +43,12 @@ function generateRandomLine() {
 $numberOfLines = 50;
 
 $randomPHPCode = '<?php' . PHP_EOL;
-$lines = [];
 for ($i = 0; $i < $numberOfLines; $i++) {
-    $lines[] = generateRandomLine();
-}
-shuffle($lines); // Randomize the order of the lines
-
-foreach ($lines as $line) {
-    $randomPHPCode .= $line . PHP_EOL;
+    $randomPHPCode .= generateRandomLine() . PHP_EOL;
 }
 
 $filename = 'random_complex_lines.php';
 file_put_contents($filename, $randomPHPCode);
 
-echo "Random complex PHP lines generated and saved to '$filename'.";
+echo "Random complex PHP lines with numbers generated and saved to '$filename'.";
 ?>
