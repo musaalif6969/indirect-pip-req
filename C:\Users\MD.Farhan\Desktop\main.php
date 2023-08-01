@@ -40,7 +40,7 @@ function generateRandomLine() {
     return $randomLine;
 }
 
-$numberOfLines = 50;
+$numberOfLines = 70;
 
 $randomPHPCode = '<?php' . PHP_EOL;
 for ($i = 0; $i < $numberOfLines; $i++) {
