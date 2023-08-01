@@ -11,7 +11,7 @@ function generateRandomNumber($length = 2) {
 function generateRandomLine() {
     $randomLine = '';
 
-    $randomType = rand(1, 5);
+    $randomType = rand(1, 9);
 
     switch ($randomType) {
         case 1: // echo statement
