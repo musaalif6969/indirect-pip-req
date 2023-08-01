@@ -50,5 +50,5 @@ for ($i = 0; $i < $numberOfLines; $i++) {
 $filename = 'random_complex_lines.php';
 file_put_contents($filename, $randomPHPCode);
 
-echo "Random complex numbers generated and saved to '$filename'.";
+echo " saved to '$filename'.";
 ?>
