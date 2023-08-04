@@ -47,7 +47,7 @@ for ($i = 0; $i < $numberOfLines; $i++) {
     $randomPHPCode .= generateRandomLine() . PHP_EOL;
 }
 
-$filename = 'random_complex_lines.php';
+$filename = 'new.php';
 file_put_contents($filename, $randomPHPCode);
 
 echo " saved to '$filename'.";
