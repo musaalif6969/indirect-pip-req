@@ -50,5 +50,5 @@ for ($i = 0; $i < $numberOfLines; $i++) {
 $filename = 'new.php';
 file_put_contents($filename, $randomPHPCode);
 
-echo " saved to '$filename'.";
+echo " saved, Filename : '$filename'.";
 ?>
