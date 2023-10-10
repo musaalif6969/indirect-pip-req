@@ -1,0 +1,68 @@
+body[data-theme=dark] .card, body[data-theme=dark] .css-bar:after, body[data-theme=dark] .custom-file-label, body[data-theme=dark] .custom-select, body[data-theme=dark] .dtp>.dtp-content, body[data-theme=dark] .form-control, body[data-theme=dark] .jsgrid-header-row>.jsgrid-header-cell, body[data-theme=dark] .jsgrid-row>.jsgrid-cell, body[data-theme=dark] .list-group-item, body[data-theme=dark] .lobilists .lobilist, body[data-theme=dark] .modal-content, body[data-theme=dark] .nav-tabs .nav-item.show .nav-link, body[data-theme=dark] .nav-tabs .nav-link.active, body[data-theme=dark] .note-editor.note-frame .note-editing-area .note-editable, body[data-theme=dark] .note-editor.note-frame .note-statusbar, body[data-theme=dark] .page-item.disabled .page-link, body[data-theme=dark] .page-link, body[data-theme=dark] .popover, body[data-theme=dark] .popover-header, body[data-theme=dark] .select2-container--classic .select2-selection--single, body[data-theme=dark] .select2-container--default .select2-selection--multiple, body[data-theme=dark] .select2-container--default .select2-selection--single {
+    background-color: #00000000;
+}
+
+
+#main-wrapper[data-layout=horizontal] .topbar .navbar-collapse[data-navbarbg=skin1], #main-wrapper[data-layout=horizontal] .topbar[data-navbarbg=skin1], #main-wrapper[data-layout=vertical] .topbar .navbar-collapse[data-navbarbg=skin1], #main-wrapper[data-layout=vertical] .topbar[data-navbarbg=skin1] {
+    background: #292929;
+}
+
+#main-wrapper[data-layout=horizontal] .left-sidebar[data-sidebarbg=skin5], #main-wrapper[data-layout=horizontal] .left-sidebar[data-sidebarbg=skin5] ul, #main-wrapper[data-layout=vertical] .left-sidebar[data-sidebarbg=skin5], #main-wrapper[data-layout=vertical] .left-sidebar[data-sidebarbg=skin5] ul {
+    background: #1c1c1c;
+}
+
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+
+td {
+    color: whitesmoke;
+}
+
+
+.navbar-brand {
+    background-color: #212529 !important;
+}
+
+.dataTable {
+    background-color: #292929 !important;
+    border-radius: 20px !important;
+}
+
+
+
+
+/* BUTTON 1 */
+.btn, .btn:link, .btn:visited {
+  color: #2c3e50;
+  line-height: 1em;
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 0 0 #2c3e50 inset, 0.3em 0.2em 0 0 #bbb;
+  border: 0.2em solid #2c3e50;
+  padding: 0.8em;
+  text-align: center;
+  transition: 0.25s box-shadow, 0.25s transform;
+}
+.btn:hover, .btn:link:hover, .btn:visited:hover {
+  box-shadow: 0 4em 0 0 #2c3e50 inset, 0em 0em 0 0 #bbb;
+  transform: translate(0.3em, 0.2em);
+  color: #fff;
+}
+
